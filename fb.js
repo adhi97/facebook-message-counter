@@ -45,7 +45,9 @@ function getData(url) {
 		  return;
 	  }
     try{
+      var clear = getData(response.comments.paging.next); //check this for correctness
     	var body = JSON.parse(response.body);
+      clear.implement();
 	if(typeof body == "undefined"){
 		return;
 	}
